@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <!-- <script language="JavaScript">
+        function showInput() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://password-encryption.azurewebsites.net/");
+
+            // xhr.setRequestHeader("Accept", "application/json");
+            // xhr.setRequestHeader("Content-Type", "application/json");
+
+            xhr.onload = () => console.log(xhr.responseText);
+            xhr.send();
+            // let data = '{ "text": ' + '"' + document.getElementById("user_input_text").value + '"' + ',' + ' "SECRET_KEY": ' + '"' + document.getElementById("user_input_secretKey").value + '"' + '}';
+            // console.log(data);
+            // xhr.send(data);
+        }
+    </script> -->
+    <script>
+
+        function httpGet() {
+            $.ajax({
+                url: "https://password-encryption.azurewebsites.net/encrypt",
+                type: "get", //send it through get method
+                data: {
+                    username: "anhquoc",
+                    password: "nguyenthivan1873",
+                },
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (xhr) {
+                    console.log("Something went wrong!");
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <button onclick="httpGet()">Start</button>
+    <!-- <form method="GET">
+        <label><b>Enter a Message</b></label>
+        <input type="text" name="text" id="user_input_text">
+        <input type="text" name="SECRET_KEY" id="user_input_secretKey">
+    </form>
+
+    <input type="submit" onclick="showInput();"><br />
+    <label>Your text: </label>
+    <p><span id='display'></span></p> -->
+
+
+
+</body>
+
+</html>
