@@ -10,9 +10,8 @@
         function httpGet() {
             $.ajax({
                 url: "https://password-encryption.azurewebsites.net/getRequest",
-                type: 'GET',
-                dataType: 'JSON',
-                data: JSON.stringify({}),
+                method: 'GET',
+                dataType: 'jsonp',
 
                 success: function (data) {
                     console.log(data);
