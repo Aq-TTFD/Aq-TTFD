@@ -27,10 +27,10 @@
             $.ajax({
                 url: "https://password-encryption.azurewebsites.net/encrypt",
                 type: "get", //send it through get method
-                dataType: 'json',
+                datatype: 'jsonp',
                 data: {
-                    username: "anhquoc",
-                    password: "nguyenthivan1873",
+                    "username": "anhquoc",
+                    "password": "nguyenthivan1873",
                 },
                 success: function (response) {
                     console.log(response);
